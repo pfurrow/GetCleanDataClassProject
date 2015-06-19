@@ -5,7 +5,7 @@ date: "16Jun2015"
 ---
 
 ## Project Description
-Assembling, extracting and aggregating select statistics from the "Human Activity Recognition Using Smartphones" raw data
+Assemble, extract and aggregate select statistics from the "Human Activity Recognition Using Smartphones" raw data
 
 ##Study design and data processing
 
@@ -13,17 +13,19 @@ Assembling, extracting and aggregating select statistics from the "Human Activit
 The input files to this processing script are from a zip file "UCI HAR Dataset.zip" which is published on the following University of California Irving web page:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The README.TXT in the zip file explains how the data was collected and the features_info.txt explains how the metrics contained in the files were generated.
+The README.TXT within the zip file explains how the data were collected and the features_info.txt file explains how the metrics contained in the raw files were generated.
 
 ###Notes on the original (raw) data 
-Some additional notes (if avaialble, otherwise you can leave this section out).
+The zip file should be downloaded from the web and extracted to an empty directory with the "Use folder names" option enabled.  Although the zip file contains parallel directories of files encoded for both Mac and Windows operating systems, this script was specifically developed and tested to run on Windows OS.  The R working directory should be set to the "UCI HAR Dataset" directory one level lower than the top extracted directory. 
 
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-![alt text](HAR_file_diagram.png)
+The following diagram shows how eight raw files are used to construct the tidy data set.
 
-Description on how to create the tidy data file (1. download the data, ...)/
+![HAR File Diagram](HAR_file_diagram.png)
+
+The zip file should be downloaded from the web and extracted to an empty directory with the "Use folder names" option enabled.  Although the zip file contains parallel directories of files encoded for both Mac and Windows operating systems, this script was specifically developed and tested to run on Windows OS.  The R working directory should be set to the "UCI HAR Dataset" directory one level lower than the top extracted directory. 
 
 ###Cleaning of the data
 Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
