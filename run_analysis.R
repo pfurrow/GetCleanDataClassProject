@@ -1,12 +1,12 @@
-## This script should be run with the working directory set to the top directory 
-## of the extracted zip file "UCI HAR Dataset.zip" which is published on the 
-## following University of California Irving web page:
+## This script requires the R working directory to be set to the top level
+## directory of the extracted "UCI HAR Dataset.zip".
 ##
-## http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+## This scrip requires the reshape2 package.
 ##
-## The script uses the reshape2 package to assemble means and standard deviations
-## of each of the measurements in the extracted text files into a wide, tidy 
-## data set using the following steps:  
+## This script will extract means and standard deviations from the measurements
+## in the raw files, calculate the averages of those 66 statistics for each 
+## subject and activity and write the resulting wide, tidy data set out to
+## a text file in the same directory called 
 ##
 ## 1. Merge the training and test sets of statistics to create one data frame
 
