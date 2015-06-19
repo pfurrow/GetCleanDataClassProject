@@ -1,12 +1,12 @@
 ## This script requires the R working directory to be set to the top level
-## directory of the extracted "UCI HAR Dataset.zip".
+## directory of the extracted "UCI HAR Dataset.zip" file.
 ##
 ## This scrip requires the reshape2 package.
 ##
 ## This script will extract means and standard deviations from the measurements
 ## in the raw files, calculate the averages of those 66 statistics for each 
 ## subject and activity and write the resulting wide, tidy data set out to
-## a text file in the same directory called 
+## "HAR Tidy Dataset of Means.txt" in the same directory. 
 ##
 ## 1. Merge the training and test sets of statistics to create one data frame
 
