@@ -15,20 +15,27 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 The README.TXT within the zip file explains how the data were collected and the features_info.txt file explains how the metrics contained in the raw files were generated.
 
-###Notes on the original (raw) data 
-The zip file should be downloaded from the web and extracted to an empty directory with the "Use folder names" option enabled.  Although the zip file contains parallel directories of files encoded for both Mac and Windows operating systems, this script was specifically developed and tested to run on Windows OS.  The R working directory should be set to the "UCI HAR Dataset" directory one level lower than the top extracted directory. 
+This document explains how to use the run_analysis.R script in this GitHub repository to generate a tidy data set from the raw files that averages selected measurements for each subject and activity in the study.
 
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
-The following diagram shows how eight raw files are used to construct the tidy data set.
+The following diagram shows how eight raw files are used to construct the wide, tidy data set.
 
 ![HAR File Diagram](HAR_file_diagram.png)
 
-The zip file should be downloaded from the web and extracted to an empty directory with the "Use folder names" option enabled.  Although the zip file contains parallel directories of files encoded for both Mac and Windows operating systems, this script was specifically developed and tested to run on Windows OS.  The R working directory should be set to the "UCI HAR Dataset" directory one level lower than the top extracted directory. 
+The zip file should be downloaded from the web and extracted to an empty directory with the "Use folder names" option enabled.  Although the zip file contains parallel directories of files encoded for both Mac and Windows operating systems, this script was specifically developed and tested to run on Windows OS and use the appropriate files.  The R working directory should be set to the top extracted directory. 
 
 ###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()
+The R script accomplishes these tasks:
+1. Merge the training and test files to create one data set
+2. Extract only the mean and standard deviation variables
+3. Generate descriptive labels for the selected variables based on the original feature names
+4. Add the identification variables of subject and activity to the data set
+5. Summarize the data for each subject and activity calculating the averages of the 33 means and 33 standard deviations
+6. Write the data set as a text file to the working directory
+
+[Refer to the README.md document for further details of the R script which produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
 
 ##Description of the variables in the tiny_data.txt file
 General description of the file including:
@@ -37,6 +44,12 @@ General description of the file including:
  - Variables present in the dataset
 
 (you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+
+Col Name | Class | Levels | Unit of Measure | Description
+------- | ----|----|-----|------
+subject | Factor | 1-30 | NA | Identifies the subject who performed the activity
+activity | Factor | 1-6 | Identifies the activity the subject performed
+
 
 ###Variable 1 (repeat this section for all variables in the dataset)
 Short description of what the variable describes.
