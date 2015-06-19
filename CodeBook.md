@@ -2,18 +2,18 @@
 title: "Codebook for the Human Activity Recognition summary dataset (HAR Tidy Dataset of Means.txt)"
 author: "Pat Furrow"
 date: "16Jun2015"
-output:
-  html_document:
-    keep_md: yes
 ---
 
 ## Project Description
-Assembling, extracting and aggregating select statistics from the Human Activity Recognition Using Smartphones raw data
+Assembling, extracting and aggregating select statistics from the "Human Activity Recognition Using Smartphones" raw data
 
 ##Study design and data processing
 
 ###Collection of the raw data
-Description of how the data was collected.
+The input files to this processing script are from a zip file "UCI HAR Dataset.zip" which is published on the following University of California Irving web page:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+The README.TXT in the zip file explains how the data was collected and the features_info.txt explains how the metrics contained in the files were generated.
 
 ###Notes on the original (raw) data 
 Some additional notes (if avaialble, otherwise you can leave this section out).
@@ -21,6 +21,8 @@ Some additional notes (if avaialble, otherwise you can leave this section out).
 ##Creating the tidy datafile
 
 ###Guide to create the tidy data file
+![alt text](HAR_file_diagram.png)
+
 Description on how to create the tidy data file (1. download the data, ...)/
 
 ###Cleaning of the data
@@ -47,9 +49,3 @@ Some information on the variable including:
 
 ####Notes on variable 1:
 If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
-
-##Sources
-Sources you used if any, otherise leave out.
-
-##Annex
-If you used any code in the codebook that had the echo=FALSE attribute post this here (make sure you set the results parameter to 'hide' as you do not want the results to show again)
