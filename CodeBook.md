@@ -55,7 +55,7 @@ The "HAR Tidy Dataset of Means.txt" file contains:
 
 ###Identification Variables
 
-Col Name | Levels | Description
+Column Name | Levels | Description
 ------- |----|-----|------
 subject | 1-30 | An integer identifying the subject who performed the activity
 activity | 1-6 | A text descriptor of the activity the subject performed  
@@ -67,7 +67,7 @@ All 66 of the measurement variables are numeric averages of extracted mean and s
 Signal Domain | Component | Sensor | Calculation | Statistic | 3-axial Signals  
 ------- | ----|----|-----|------|----
 t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X = x direction
-f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = std deviation |Y = y direction
+f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = standard deviation |Y = y direction
   |   |   |   |  | Z = z direction
 
 All measurement variables have one of two units of measure based on the instrument that generated the measurement:
