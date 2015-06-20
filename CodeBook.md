@@ -19,24 +19,24 @@ NOTE:  The features.txt file contains 84 duplicate feature names.  These can be 
 ```
 HARlabels[duplicated(HARlabels[,2]),]  
 ```
-The associated values in the measurement files for those duplicate labels are not duplicate, so if the R script is modified to use different columns of statistics, the results may be unpredictable.
+The associated values in the measurement files for those duplicate labels are not identical, so if the R script is modified to extract different columns of statistics, the results may be unexpected.
 
 ##Creating the tidy datafile
-This document describes the tidy data set generated from the raw files to calculate the averages of selected measurements for each subject and activity in the study.
+This document describes the tidy data set generated from the raw files containing the averages of selected measurements for each subject and activity in the study.
 
 ###Guide to create the tidy data file
-The following diagram shows how eight raw files are used to construct the wide, tidy data set.
+The following diagram illustrates how eight raw files are used to construct the wide, tidy data set.
 
 ![HAR File Diagram](HAR_file_diagram.png)
 
-The zip file should be downloaded from the web and extracted to an empty directory in such a way that the internal directory structure is maintained.  The zip file contains parallel directories of files encoded for both Mac and Windows operating systems.  While this script was specifically developed and tested to run on Windows OS it should work transparently on Mac OS also.  
+The zip file should be downloaded from the web and extracted to an empty directory in such a way that the internal directory structure is maintained.  The zip file contains parallel directories of files encoded for both Mac and Windows operating systems.  While this script was specifically developed and tested to run on Windows OS it should also work transparently on Mac OS.  
 
 The R working directory should be set to the top extracted directory.  
 
 The R package reshape2 must be loaded. 
 
 ###Cleaning of the data
-The R script accomplishes these tasks:  
+Running the R script accomplishes these tasks:  
 1. Merge the training and test files to create one data set  
 2. Extract only the mean and standard deviation statistics  
 3. Generate descriptive labels for the selected statistics based on the original feature names  
@@ -48,9 +48,10 @@ The R script accomplishes these tasks:
 
 ##Description of Variables 
 The "HAR Tidy Dataset of Means.txt" file contains:
- - 180 rows x 68 columns
- - 2 identification variables (factors)
- - 66 measurement variables (numeric)
+* 180 rows of statistics for 30 subjects performing 6 activities
+* Each row contains 68 variables
+   + 2 identification variables (factors)
+   + 66 measurement variables (numeric)
 
 ###Identification Variables
 
@@ -63,15 +64,15 @@ activity | 1-6 | A text descriptor of the activity the subject performed
 ###Measurement Variables
 All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
 
-Signal Domain | Acceleration Source | Instrument | Calculation | 3-axial Signals
+Signal Domain | Acceleration Source | Instrument | Calculation | Statistic | 3-axial Signals
 ------- | ----|----|-----|------
-t = time | Body | Acc=accelerometer | Jerk = time derivation | X = x direction
-f = frequency | Gravity | Gyro=gyroscope | Mag = magnitude | Y = y direction
+t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X = x direction
+f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = standard deviation |Y = y direction
   |   |   |   | Z = z direction
 
 All variables have one of two units of measure:
 
 Instrument | Unit of measure
 -----------------|--------------
-accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s<sup>2</sup>)
+accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s^2^)
 gyroscope ("Gyro" in variable name) | radian per second (rad/s)
