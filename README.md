@@ -1,9 +1,9 @@
 # Course Project - Getting and Cleaning Data
 
-This repository contains required files to satisfy the project requirements of the Getting and Cleaning Data course:
+This repository contains files to satisfy the project requirements of the Getting and Cleaning Data course:
 * run_analysis.R - script which generates the required wide, tidy data set
 * Codebook.md - describes the wide, tidy data set that is produced by the script
-* README.md - this document which describes how the run_analysis.R script works
+* README.md - this document which describes how to use the run_analysis.R script
 
 ## Steps to run the script run_analysis.R
 
@@ -23,18 +23,18 @@ If the rshape2 package is not already installed, use the drop down menus or inst
 
 ### Download and run the script
 
-Once the prerequisites are complete, save the run_analysis.R script file to your hard drive, open it and execute it in R.
+Once the prerequisites are complete, download the run_analysis.R script, open it and execute it in R.
 
-### Examining the resulting data set
+## Examining the resulting data set
 
-The script generates a wide, tidy data set in the form of the text file "HAR Tidy Dataset of Means.txt" in the working directory.  The data set can be loaded from the working directory usingthe command 
+The script generates a wide, tidy data set in the form of the text file "HAR Tidy Dataset of Means.txt" in the working directory.  The data set can be loaded from the working directory using the command 
 ```
 HARtidy <- read.table("HAR Tidy Dataset of Means.txt", header=T )
 ```
 
-[Refer to the CodeBook.md document for an overview of the logic used in the script to produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/CodeBook.md)
+Refer to the [CodeBook.md document](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/CodeBook.md) for an overview of the logic used in the script to produce the summary data set.
 
-[Refer to the comments within the script for details on each step of the processing to produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/run_analysis.R)
+Refer to the comments within the [run_analysis.R](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/run_analysis.R) script for details on each step of the processing to produce the summary data set.
 
 
 

@@ -10,7 +10,7 @@
 ##
 ## Refer to the CodeBook.md and README.md documents in this same repository for
 ## an overview of the cleaning logic contained in this script and help on
-## running the script successfuly.
+## running the script successfully.
 ##
 ## 1. Merge the training and test sets of statistics to create one data frame
 

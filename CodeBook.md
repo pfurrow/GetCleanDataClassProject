@@ -37,7 +37,7 @@ Running the R script accomplishes these tasks:
 5. Calculate the average of each extracted measurement for each subject and activity  
 6. Write the summary data set to the working directory as a text file  
 
-[Refer to the README.md document for further details of how to run the script to produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
+[Refer to the README.md document for instructions on running the script to produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
 
 ##Description of Variables 
 The "HAR Tidy Dataset of Means.txt" file contains:
@@ -63,13 +63,31 @@ t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X
 f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = standard deviation |Y = y direction
   |   |   |   |  | Z = z direction
 
-All measurement variables have one of two units of measure based on the instrument that generated the measurement:
+All measurement variables have one of two units of measure based on the sensor that generated the measurement:
 
-Instrument | Unit of measure
+Sensor | Unit of measure
 -----------------|--------------
 accelerometer ("Acc" in the variable name)| g's or meters per second squared (m/s<sup>2</sup>)
 gyroscope ("Gyro" in the variable name) | radian per second (rad/s)
 
+Here is a complete list of the 66 variable averages in the tidy data set:
+
+"tBodyAcc_mean_X"           "tBodyAcc_mean_Y"           "tBodyAcc_mean_Z"           "tBodyAcc_std_X"            "tBodyAcc_std_Y"            "tBodyAcc_std_Z"            "tGravityAcc_mean_X"        "tGravityAcc_mean_Y"        "tGravityAcc_mean_Z"        "tGravityAcc_std_X"         "tGravityAcc_std_Y"         "tGravityAcc_std_Z" 
+"tBodyAccJerk_mean_X"       "tBodyAccJerk_mean_Y"       "tBodyAccJerk_mean_Z"       "tBodyAccJerk_std_X"        "tBodyAccJerk_std_Y"        "tBodyAccJerk_std_Z"        "tBodyGyro_mean_X"          "tBodyGyro_mean_Y"          "tBodyGyro_mean_Z"         "tBodyGyro_std_X"           "tBodyGyro_std_Y"           "tBodyGyro_std_Z"           "tBodyGyroJerk_mean_X"      "tBodyGyroJerk_mean_Y"      "tBodyGyroJerk_mean_Z"      "tBodyGyroJerk_std_X"       "tBodyGyroJerk_std_Y"       "tBodyGyroJerk_std_Z"       "tBodyAccMag_mean"          "tBodyAccMag_std"           
+"tGravityAccMag_mean"       "tGravityAccMag_std"        
+"tBodyAccJerkMag_mean"      "tBodyAccJerkMag_std"       
+"tBodyGyroMag_mean"         "tBodyGyroMag_std"          
+"tBodyGyroJerkMag_mean"     "tBodyGyroJerkMag_std"      
+"fBodyAcc_mean_X"           "fBodyAcc_mean_Y"           "fBodyAcc_mean_Z"          
+"fBodyAcc_std_X"            "fBodyAcc_std_Y"            "fBodyAcc_std_Z"           
+"fBodyAccJerk_mean_X"       "fBodyAccJerk_mean_Y"       "fBodyAccJerk_mean_Z"      
+"fBodyAccJerk_std_X"        "fBodyAccJerk_std_Y"        "fBodyAccJerk_std_Z"       
+"fBodyGyro_mean_X"          "fBodyGyro_mean_Y"          "fBodyGyro_mean_Z"         
+"fBodyGyro_std_X"           "fBodyGyro_std_Y"           "fBodyGyro_std_Z"          
+"fBodyAccMag_mean"          "fBodyAccMag_std"           
+"fBodyBodyAccJerkMag_mean"  "fBodyBodyAccJerkMag_std"   
+"fBodyBodyGyroMag_mean"     "fBodyBodyGyroMag_std"     
+"fBodyBodyGyroJerkMag_mean" "fBodyBodyGyroJerkMag_std"
 
 -----------
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013. 
