@@ -7,7 +7,7 @@ date: "16Jun2015"
 ## Project Description
 Assemble, extract and aggregate select statistics from the "Human Activity Recognition Using Smartphones" raw data
 
-##Study design and data processing
+##Study Design and Data Processing
 
 ###Collection of the raw data
 The input files to this processing script are from a zip file "UCI HAR Dataset.zip" which is published on the following University of California Irving web page:
@@ -19,7 +19,7 @@ NOTE:  The features.txt file contains 84 duplicate feature names.  These can be 
 ```
 HARlabels[duplicated(HARlabels[,2]),]  
 ```
-The values in the associated measurement files are not duplicate, so care should be taken if the script is modified to use different columns of statistics as the results are unpredictable.
+The associated values in the measurement files for those duplicate labels are not duplicate, so if the R script is modified to use different columns of statistics, the results may be unpredictable.
 
 ##Creating the tidy datafile
 This document describes the tidy data set generated from the raw files to calculate the averages of selected measurements for each subject and activity in the study.
@@ -36,7 +36,7 @@ The R working directory should be set to the top extracted directory.
 The R package reshape2 must be loaded. 
 
 ###Cleaning of the data
-The R script accomplishes these tasks:
+The R script accomplishes these tasks:  
 1. Merge the training and test files to create one data set  
 2. Extract only the mean and standard deviation statistics  
 3. Generate descriptive labels for the selected statistics based on the original feature names  
@@ -54,17 +54,16 @@ General description of the file including:
 
 ###Identification Variables
 
-Col Name | Class | Levels | Unit of Measure | Description
+Col Name | Class | Levels | Description
 ------- | ----|----|-----|------
-subject | Factor | 1-30 | NA | Identifies the subject who performed the activity
-activity | Factor | 1-6 | NA | Identifies the activity the subject performed
+subject | Factor | 1-30 | An integer identifying the subject who performed the activity
+activity | Factor | 1-6 | A text descriptor the activity the subject performed
 
 
 ###Measurement Variables
-All the measurements variables are averages of means and standard deviations for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set:
+All 66 of the measurement variables are averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores:
 
-signal | acceleration |         |              | 
-domain | component | instrument | calculation | 3-axial signals
+signal domain | acceleration component | instrument | calculation | 3-axial signals
 ------- | ----|----|-----|------
 t = time | Body | Acc=accelerometer | Jerk = time derivation | X = x direction
 f = frequency | Gravity | Gyro=gyroscope | Mag = magnitude | Y = y direction
@@ -72,8 +71,8 @@ f = frequency | Gravity | Gyro=gyroscope | Mag = magnitude | Y = y direction
 
 instrument | unit of measure
 -----------------|--------------
-accelerometer (Acc in variable name)| g's or metres per second squared (m/s^2)
-gyroscope (Gyro in variable name) | radian per second (rad/s)
+accelerometer ("Acc" in variable name)| g's or metres per second squared (m/s<sup>2<\sup>)
+gyroscope ("Gyro" in variable name) | radian per second (rad/s)
 
 Some information on the variable including:
  - Class of the variable
