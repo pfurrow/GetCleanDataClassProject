@@ -1,9 +1,3 @@
----
-title: "Codebook for the Human Activity Recognition summary dataset (HAR Tidy Dataset of Means.txt)"
-author: "Pat Furrow"
-date: "16Jun2015"
----
-
 ## Project Description
 Assemble, extract and aggregate select statistics from the "Human Activity Recognition Using Smartphones Dataset" [1]
 
@@ -70,7 +64,7 @@ Sensor | Unit of measure
 accelerometer ("Acc" in the variable name)| g's or meters per second squared (m/s<sup>2</sup>)
 gyroscope ("Gyro" in the variable name) | radian per second (rad/s)
 
-Here is a complete list of the 66 variable averages in the tidy data set:
+Here is a complete list of the averages of the 66 variables in the tidy data set:
 
      |      |      |
 -----|------|------|     
