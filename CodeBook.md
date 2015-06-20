@@ -64,10 +64,10 @@ activity | 1-6 | A text descriptor of the activity the subject performed
 ###Measurement Variables
 All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
 
-Signal Domain | Acceleration Source | Instrument | Calculation | Statistic | 3-axial Signals
-------- | ----|----|-----|------
+Signal Domain | Acceleration Source | Instrument | Calculation | Statistic | 3-axial Signals  
+------- | ----|----|-----|------|----
 t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X = x direction
-f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = standard deviation |Y = y direction
+f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = std deviation |Y = y direction
   |   |   |   | Z = z direction
 
 All variables have one of two units of measure:
