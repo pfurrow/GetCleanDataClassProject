@@ -59,7 +59,7 @@ Col Name | Levels | Description
 ------- |----|-----|------
 subject | 1-30 | An integer identifying the subject who performed the activity
 activity | 1-6 | A text descriptor of the activity the subject performed  
- | | | Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
+ | | Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
 
 ###Measurement Variables
 All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
