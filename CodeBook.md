@@ -16,31 +16,33 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The README.TXT within the zip file explains how the data were collected and the features_info.txt file explains how the metrics contained in the raw files were generated.
 
 NOTE:  The features.txt file contains 84 duplicate feature names.  These can be displayed after the script is run using this R command:  
-```HARlabels[duplicated(HARlabels[,2]),]  
 ```
-The values in the associated measurement files are not duplicate, so care should be taken if the script is modified to extract different columns as results are unpredictable.
-
-This document describes the tidy data set generated from the raw files to calculate the averages of selected measurements for each subject and activity in the study.
+HARlabels[duplicated(HARlabels[,2]),]  
+```
+The values in the associated measurement files are not duplicate, so care should be taken if the script is modified to use different columns of statistics as the results are unpredictable.
 
 ##Creating the tidy datafile
+This document describes the tidy data set generated from the raw files to calculate the averages of selected measurements for each subject and activity in the study.
 
 ###Guide to create the tidy data file
 The following diagram shows how eight raw files are used to construct the wide, tidy data set.
 
 ![HAR File Diagram](HAR_file_diagram.png)
 
-The zip file should be downloaded from the web and extracted to an empty directory in such a way that the internal directory structure is maintained.  The zip file contains parallel directories of files encoded for both Mac and Windows operating systems.  While this script was specifically developed and tested to run on Windows OS it should work transparently on the Mac OS also.  
+The zip file should be downloaded from the web and extracted to an empty directory in such a way that the internal directory structure is maintained.  The zip file contains parallel directories of files encoded for both Mac and Windows operating systems.  While this script was specifically developed and tested to run on Windows OS it should work transparently on Mac OS also.  
 
-The R working directory should be set to the top extracted directory.  The R package reshape2 must be loaded. 
+The R working directory should be set to the top extracted directory.  
+
+The R package reshape2 must be loaded. 
 
 ###Cleaning of the data
 The R script accomplishes these tasks:
-1.Merge the training and test files to create one data set
-2.Extract only the mean and standard deviation variables
-3.Generate descriptive labels for the selected variables based on the original feature names
-4.Add the identification variables of subject and activity to the data set
-5.Summarize the data for each subject and activity by calculating the averages of the extracted measurements
-6.Write the summary data set to the working directory as a text file
+1. Merge the training and test files to create one data set  
+2. Extract only the mean and standard deviation statistics  
+3. Generate descriptive labels for the selected statistics based on the original feature names  
+4. Add the identification variables "subject" and "activity" to the data set  
+5. Calculate the average of each extracted measurement for each subject and activity  
+6. Write the summary data set to the working directory as a text file  
 
 [Refer to the README.md document for further details of the R code which produces the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
 
@@ -48,9 +50,9 @@ The R script accomplishes these tasks:
 General description of the file including:
  - Dimensions of the dataset
  - Summary of the data
- - Variables present in the dataset
+ - 2 identification and 66 measurement variables are present in the dataset
 
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
+###Identification Variables
 
 Col Name | Class | Levels | Unit of Measure | Description
 ------- | ----|----|-----|------
@@ -58,8 +60,20 @@ subject | Factor | 1-30 | NA | Identifies the subject who performed the activity
 activity | Factor | 1-6 | NA | Identifies the activity the subject performed
 
 
-###Variable 1 (repeat this section for all variables in the dataset)
-Short description of what the variable describes.
+###Measurement Variables
+All the measurements variables are averages of means and standard deviations for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set:
+
+signal | acceleration |         |              | 
+domain | component | instrument | calculation | 3-axial signals
+------- | ----|----|-----|------
+t = time | Body | Acc=accelerometer | Jerk = time derivation | X = x direction
+f = frequency | Gravity | Gyro=gyroscope | Mag = magnitude | Y = y direction
+  |   |   |   | Z = z direction
+
+instrument | unit of measure
+-----------------|--------------
+accelerometer (Acc in variable name)| g's or metres per second squared (m/s^2)
+gyroscope (Gyro in variable name) | radian per second (rad/s)
 
 Some information on the variable including:
  - Class of the variable
