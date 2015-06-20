@@ -21,21 +21,14 @@ HARlabels[duplicated(HARlabels[,2]),]
 ```
 The associated values in the measurement files for those duplicate labels are not identical, so if the R script is modified to extract different columns of statistics, the results may be unexpected.
 
-##Creating the tidy datafile
-This document describes the tidy data set generated from the raw files containing the averages of selected measurements for each subject and activity in the study.
+##Creating the tidy data set
+This document describes the logic used to generate a tidy data set containing the averages of selected measurements for each subject and activity in the study.
 
-###Guide to create the tidy data file
 The following diagram illustrates how eight raw files are used to construct the wide, tidy data set.
 
 ![HAR File Diagram](HAR_file_diagram.png)
 
-The zip file should be downloaded from the web and extracted to an empty directory in such a way that the internal directory structure is maintained.  The zip file contains parallel directories of files encoded for both Mac and Windows operating systems.  While this script was specifically developed and tested to run on Windows OS it should also work transparently on Mac OS.  
-
-The R working directory should be set to the top extracted directory.  
-
-The R package reshape2 must be loaded. 
-
-###Cleaning of the data
+###Cleaning the data
 Running the R script accomplishes these tasks:  
 1. Merge the training and test files to create one data set  
 2. Extract only the mean and standard deviation statistics  
@@ -44,7 +37,7 @@ Running the R script accomplishes these tasks:
 5. Calculate the average of each extracted measurement for each subject and activity  
 6. Write the summary data set to the working directory as a text file  
 
-[Refer to the README.md document for further details of the R code which produces the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
+[Refer to the README.md document for further details of how to run the script to produce the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
 
 ##Description of Variables 
 The "HAR Tidy Dataset of Means.txt" file contains:
