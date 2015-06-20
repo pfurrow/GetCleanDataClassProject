@@ -46,41 +46,32 @@ The R script accomplishes these tasks:
 
 [Refer to the README.md document for further details of the R code which produces the summary data set.](https://github.com/pfurrow/GetCleanDataClassProject/blob/master/README.md)
 
-##Description of the variables in the "HAR Tidy Dataset of Means.txt" file
-General description of the file including:
- - Dimensions of the dataset
- - Summary of the data
- - 2 identification and 66 measurement variables are present in the dataset
+##Description of Variables 
+The "HAR Tidy Dataset of Means.txt" file contains:
+ - 180 rows x 68 columns
+ - 2 identification variables (factors)
+ - 66 measurement variables (numeric)
 
 ###Identification Variables
 
-Col Name | Class | Levels | Description
-------- | ----|----|-----|------
-subject | Factor | 1-30 | An integer identifying the subject who performed the activity
-activity | Factor | 1-6 | A text descriptor the activity the subject performed
-
+Col Name | Levels | Description
+------- |----|-----|------
+subject | 1-30 | An integer identifying the subject who performed the activity
+activity | 1-6 | A text descriptor of the activity the subject performed
+ | | |     Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
 
 ###Measurement Variables
-All 66 of the measurement variables are averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores:
+All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
 
-signal domain | acceleration component | instrument | calculation | 3-axial signals
+Signal Domain | Acceleration Source | Instrument | Calculation | 3-axial Signals
 ------- | ----|----|-----|------
 t = time | Body | Acc=accelerometer | Jerk = time derivation | X = x direction
 f = frequency | Gravity | Gyro=gyroscope | Mag = magnitude | Y = y direction
   |   |   |   | Z = z direction
 
-instrument | unit of measure
+All variables have one of two units of measure:
+
+Instrument | Unit of measure
 -----------------|--------------
-accelerometer ("Acc" in variable name)| g's or metres per second squared (m/s<sup>2<\sup>)
+accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s<sup>2</sup>)
 gyroscope ("Gyro" in variable name) | radian per second (rad/s)
-
-Some information on the variable including:
- - Class of the variable
- - Unique values/levels of the variable
- - Unit of measurement (if no unit of measurement list this as well)
- - In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels). 
-
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-####Notes on variable 1:
-If available, some additional notes on the variable not covered elsewehere. If no notes are present leave this section out.
