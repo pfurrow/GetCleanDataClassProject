@@ -5,7 +5,7 @@ date: "16Jun2015"
 ---
 
 ## Project Description
-Assemble, extract and aggregate select statistics from the "Human Activity Recognition Using Smartphones" raw data
+Assemble, extract and aggregate select statistics from the "Human Activity Recognition Using Smartphones Dataset" [1]
 
 ##Study Design and Data Processing
 
@@ -64,15 +64,19 @@ activity | 1-6 | A text descriptor of the activity the subject performed
 ###Measurement Variables
 All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
 
-Signal Domain | Acceleration Source | Instrument | Calculation | Statistic | 3-axial Signals  
+Signal Domain | Component | Sensor | Calculation | Statistic | 3-axial Signals  
 ------- | ----|----|-----|------|----
 t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X = x direction
 f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = std deviation |Y = y direction
   |   |   |   |  | Z = z direction
 
-All measurement variables have one of two units of measure:
+All measurement variables have one of two units of measure based on the instrument that generated the measurement:
 
 Instrument | Unit of measure
 -----------------|--------------
-accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s<sup>2</sup>)
-gyroscope ("Gyro" in variable name) | radian per second (rad/s)
+accelerometer ("Acc" in the variable name)| g's or meters per second squared (m/s<sup>2</sup>)
+gyroscope ("Gyro" in the variable name) | radian per second (rad/s)
+
+
+-----------
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013. 
