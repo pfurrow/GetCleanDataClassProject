@@ -48,7 +48,7 @@ Running the R script accomplishes these tasks:
 
 ##Description of Variables 
 The "HAR Tidy Dataset of Means.txt" file contains:
-* 180 rows of statistics for 30 subjects performing 6 activities
+* 180 rows of statistics for 30 subjects performing 6 activities each
 * Each row contains 68 variables
    + 2 identification variables (factors)
    + 66 measurement variables (numeric)
@@ -58,8 +58,8 @@ The "HAR Tidy Dataset of Means.txt" file contains:
 Col Name | Levels | Description
 ------- |----|-----|------
 subject | 1-30 | An integer identifying the subject who performed the activity
-activity | 1-6 | A text descriptor of the activity the subject performed
- | | |     Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
+activity | 1-6 | A text descriptor of the activity the subject performed  
+ | | | Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
 
 ###Measurement Variables
 All 66 of the measurement variables are numeric averages of extracted mean and standard deviation metrics for each subject and activity.  The variable naming convention is consistent with the original feature labels of the data set except parentheses have been removed and hyphens are replaced with underscores to make legal column names.  The variable name is composed of several descriptive elements:
@@ -68,11 +68,11 @@ Signal Domain | Acceleration Source | Instrument | Calculation | Statistic | 3-a
 ------- | ----|----|-----|------|----
 t = time | Body | Acc = accelerometer | Jerk = time derivation | mean = mean | X = x direction
 f = frequency | Gravity | Gyro = gyroscope | Mag = magnitude | std = std deviation |Y = y direction
-  |   |   |   | Z = z direction
+  |   |   |   |  | Z = z direction
 
-All variables have one of two units of measure:
+All measurement variables have one of two units of measure:
 
 Instrument | Unit of measure
 -----------------|--------------
-accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s^2^)
+accelerometer ("Acc" in variable name)| g's or meters per second squared (m/s<sup>2</sup>)
 gyroscope ("Gyro" in variable name) | radian per second (rad/s)
