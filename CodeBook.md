@@ -72,8 +72,8 @@ gyroscope ("Gyro" in the variable name) | radian per second (rad/s)
 
 Here is a complete list of the 66 variable averages in the tidy data set:
 
-     |      |
------|------|------     
+     |      |      |
+-----|------|------|     
 "tBodyAcc_mean_X"          | "tBodyAcc_mean_Y"          | "tBodyAcc_mean_Z"             
 "tBodyAcc_std_X"           | "tBodyAcc_std_Y"           | "tBodyAcc_std_Z"              
 "tGravityAcc_mean_X"       | "tGravityAcc_mean_Y"       | "tGravityAcc_mean_Z"          
